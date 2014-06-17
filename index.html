@@ -28,7 +28,7 @@ html, body {
 				contentType: "application/json; charset=utf-8",
 				success: function(data, status, xhr) {
 					if (data.code == 1) {
-						$('#iframe').attr('src', "http://webchat.freenode.net?channels=%23homeworkhunt&uio=Mj10cnVlJjQ9dHJ1ZSY5PXRydWUmMTE9MTc097&nick=" + data.username);
+						$('#iframe').attr('src', "http://webchat.freenode.net?channels=%23homeworkhunt&uio=Mj10cnVlJjQ9dHJ1ZSY5PXRydWUmMTE9MTc097&nick=" + data.message);
 					} else {
 						$('#iframe').attr('src', "http://webchat.freenode.net?channels=%23homeworkhunt&uio=Mj10cnVlJjQ9dHJ1ZSY5PXRydWUmMTE9MTc097&randomnick=1");;
 					}
