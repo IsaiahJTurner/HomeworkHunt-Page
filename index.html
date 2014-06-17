@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Chill Out Zone</title>
+    <style type="text/css">
+    html, body {
+  height: 100%;
+  overflow: auto;
+  border: 0;
+	margin: 0;
+	padding: 0;
+}
+iframe {
+	height: 100%;
+	width: 100%;
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+    </style>
+    <script type="text/javascript">
+    window.onload = function(){
+    var params = {};
+
+if (location.search) {
+    var parts = location.search.substring(1).split('&');
+
+    for (var i = 0; i < parts.length; i++) {
+        var nv = parts[i].split('=');
+        if (!nv[0]) continue;
+        params[nv[0]] = nv[1] || true;
+    }
+}	
+	if (params.u) {
+	 document.getElementById('iframe').src =  "http://webchat.freenode.net?channels=%23homeworkhunt&uio=Mj10cnVlJjQ9dHJ1ZSY5PXRydWUmMTE9MTc097&nick=" + params.u;
+	 } else {
+		document.getElementById('iframe').src =  "http://webchat.freenode.net?channels=%23homeworkhunt&uio=Mj10cnVlJjQ9dHJ1ZSY5PXRydWUmMTE9MTc097";
+	 }
+	 }
+    </script>
+</head>
+
+<body>
+    <iframe id="iframe"></iframe>
+</body>
+</html>
